@@ -1,0 +1,19 @@
+name: dev
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pytest
+  - pytest-asyncio
+  - pytest-cov
+  - pylint
+  - flake8
+  - isort
+  - pre-commit
+  - black
+  - sphinx
+  - ipykernel
+  - nb_conda_kernels
+  - pip
+  - pip:
+    - sphinx-rtd-theme
