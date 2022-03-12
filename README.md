@@ -1,2 +1,2 @@
 # anaconda-docker
-A template for using anaconda and docker to develop, test, package, and deploy python applications.
+Templates for developing, testing, packaging, and deploying python applications.

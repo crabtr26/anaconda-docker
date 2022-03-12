@@ -1,5 +1,3 @@
-import dask
-
 def greet(name: str) -> str:
     """Greet the user!
 
@@ -8,6 +6,7 @@ def greet(name: str) -> str:
 
     Returns:
         greeting: A greeting message for the user.
+        
     """
     return f"Hello {name}!"
 

@@ -11,6 +11,4 @@ FROM debian:buster AS runtime
 COPY --from=build /venv /venv
 COPY src .
 SHELL ["/bin/bash", "-c"]
-ENTRYPOINT ["tini", "-g", "--"]
-RUN source /venv/bin/activate && \
-           python -c "import pandas; print('success!')"
+ENTRYPOINT source /venv/bin/activate && python -c "import pandas; print('success!')"
