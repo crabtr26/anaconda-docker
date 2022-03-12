@@ -10,7 +10,7 @@ RUN /venv/bin/conda-unpack
 FROM debian:buster AS runtime
 COPY --from=build /venv /venv
 COPY src .
-COPY jobs .
 SHELL ["/bin/bash", "-c"]
-ENTRYPOINT source /venv/bin/activate && \
-           python -c "import websockets; print('success!')"
+ENTRYPOINT ["tini", "-g", "--"]
+RUN source /venv/bin/activate && \
+           python -c "import pandas; print('success!')"
